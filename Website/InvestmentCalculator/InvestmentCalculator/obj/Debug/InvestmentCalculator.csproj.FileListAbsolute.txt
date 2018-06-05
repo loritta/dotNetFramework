@@ -1,0 +1,9 @@
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\bin\InvestmentCalculator.dll.config
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\bin\InvestmentCalculator.dll
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\bin\InvestmentCalculator.pdb
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\obj\Debug\InvestmentCalculator.csprojResolveAssemblyReference.cache
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\obj\Debug\InvestmentCalculator.csproj.CoreCompileInputs.cache
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\obj\Debug\InvestmentCalculator.dll
+D:\Larisa S\dotNetFramework\Website\InvestmentCalculator\InvestmentCalculator\obj\Debug\InvestmentCalculator.pdb

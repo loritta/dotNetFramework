@@ -1,0 +1,9 @@
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\bin\PriceQuotation.dll.config
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\bin\PriceQuotation.dll
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\bin\PriceQuotation.pdb
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\obj\Debug\PriceQuotation.csprojResolveAssemblyReference.cache
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\obj\Debug\PriceQuotation.csproj.CoreCompileInputs.cache
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\obj\Debug\PriceQuotation.dll
+D:\Larisa S\dotNetFramework\Website\PriceQuotation\PriceQuotation\obj\Debug\PriceQuotation.pdb

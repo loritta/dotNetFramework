@@ -1,0 +1,9 @@
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\bin\FirstProject.dll.config
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\bin\FirstProject.dll
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\bin\FirstProject.pdb
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\obj\Debug\FirstProject.csprojResolveAssemblyReference.cache
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\obj\Debug\FirstProject.csproj.CoreCompileInputs.cache
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\obj\Debug\FirstProject.dll
+D:\Larisa S\dotNetFramework\Website\FirstProject\FirstProject\obj\Debug\FirstProject.pdb
