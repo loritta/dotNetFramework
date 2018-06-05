@@ -17,5 +17,31 @@ namespace InvestmentCalculator
             }
             
         }
+
+        protected void btnCalc_Click(object sender, EventArgs e)
+        {
+            int years = int.Parse(txtYears.Text);
+            decimal yearlyInterestRate = decimal.Parse(ddlRate.SelectedValue);
+            int monthlyInvest = int.Parse(txtInvestment.Text);
+
+            decimal investment = CalculateValue(monthlyInvest, yearlyInterestRate, years);
+            lblResult.Text = "Hello " + txtName.Text + "\n" + 
+                "The investment would be = " + investment.ToString(".00");
+        }
+
+        protected decimal CalculateValue(int monthlyInvestment, decimal yearlyInterestRate, int years)
+        {
+            int months = years * 12;
+            decimal monthlyInterestRate = yearlyInterestRate / 12 / 100;
+            decimal futureValue = 0;
+            for (int i = 0; i < months; i++)
+            {
+                futureValue = (futureValue + monthlyInvestment) * (1 +
+                monthlyInterestRate);
+            }
+            return futureValue;
+        }
     }
+
+
 }

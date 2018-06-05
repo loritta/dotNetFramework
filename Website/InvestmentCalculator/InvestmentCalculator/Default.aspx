@@ -69,9 +69,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Button ID="btnCalc" runat="server" Text="Calculate" Width="100px" />
+                        <asp:Button ID="btnCalc" runat="server" Text="Calculate" Width="100px" OnClick="btnCalc_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnClear" runat="server" Text="Button" Width="100px" />
+                        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="100px" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
