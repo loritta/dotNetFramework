@@ -11,9 +11,11 @@ namespace InvestmentCalculator
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+
             for (int i = 50; i <=500; i+=50)
             {
-                ddlRate.Items.Add(i.ToString());
+                ddlInvest.Items.Add(i.ToString());
             }
             
         }
@@ -21,8 +23,8 @@ namespace InvestmentCalculator
         protected void btnCalc_Click(object sender, EventArgs e)
         {
             int years = int.Parse(txtYears.Text);
-            decimal yearlyInterestRate = decimal.Parse(ddlRate.SelectedValue);
-            int monthlyInvest = int.Parse(txtInvestment.Text);
+            decimal yearlyInterestRate = decimal.Parse(txtRate.Text);
+            int monthlyInvest = int.Parse(ddlInvest.SelectedValue);
 
             decimal investment = CalculateValue(monthlyInvest, yearlyInterestRate, years);
             lblResult.Text = "Hello " + txtName.Text + "\n" + 
@@ -40,6 +42,25 @@ namespace InvestmentCalculator
                 monthlyInterestRate);
             }
             return futureValue;
+        }
+
+        /**
+        * Form clearing function
+        * Clear all data in the form
+        * */
+        private void clearForm()
+        {
+            txtName.Text = "";
+            txtRate.Text = "";
+            //txtName.Text=string.Empty; --->>> another way to clear it
+            txtYears.Text = string.Empty;
+            ddlInvest.ClearSelection();
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            clearForm();
+            txtName.Focus();
         }
     }
 

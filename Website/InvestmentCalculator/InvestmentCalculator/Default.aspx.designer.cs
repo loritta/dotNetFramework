@@ -31,22 +31,58 @@ namespace InvestmentCalculator {
         protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
-        /// txtInvestment control.
+        /// rfvName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInvestment;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
         
         /// <summary>
-        /// ddlRate control.
+        /// txtRate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRate;
+        protected global::System.Web.UI.WebControls.TextBox txtRate;
+        
+        /// <summary>
+        /// rfvRate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvRate;
+        
+        /// <summary>
+        /// rvRate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvRate;
+        
+        /// <summary>
+        /// ddlInvest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlInvest;
+        
+        /// <summary>
+        /// rfvInvest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvInvest;
         
         /// <summary>
         /// txtYears control.
@@ -56,6 +92,33 @@ namespace InvestmentCalculator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtYears;
+        
+        /// <summary>
+        /// rfvYears control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvYears;
+        
+        /// <summary>
+        /// cvYears control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvYears;
+        
+        /// <summary>
+        /// rvYears control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvYears;
         
         /// <summary>
         /// btnCalc control.
@@ -74,6 +137,15 @@ namespace InvestmentCalculator {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnClear;
+        
+        /// <summary>
+        /// vsForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsForm;
         
         /// <summary>
         /// lblResult control.

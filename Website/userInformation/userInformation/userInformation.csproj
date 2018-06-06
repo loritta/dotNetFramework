@@ -75,6 +75,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Error.html" />
+    <Content Include="Images\money.jpg" />
+    <Content Include="Images\Oopsbutton.jpg" />
+    <Content Include="UserControl\Footer.ascx" />
+    <Content Include="UserControl\Header.ascx" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
   </ItemGroup>
@@ -86,6 +91,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

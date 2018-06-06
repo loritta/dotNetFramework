@@ -22,6 +22,15 @@ namespace userInformation {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Header1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::userInformation.UserControl.Header Header1;
+        
+        /// <summary>
         /// tbName control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,31 @@ namespace userInformation {
         protected global::System.Web.UI.WebControls.TextBox tbName;
         
         /// <summary>
-        /// calBirth control.
+        /// rfvName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calBirth;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
+        
+        /// <summary>
+        /// tbDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbDate;
+        
+        /// <summary>
+        /// rfvBirth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBirth;
         
         /// <summary>
         /// tbEmail control.
@@ -49,6 +76,24 @@ namespace userInformation {
         protected global::System.Web.UI.WebControls.TextBox tbEmail;
         
         /// <summary>
+        /// rfvEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+        
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        
+        /// <summary>
         /// ddlProvince control.
         /// </summary>
         /// <remarks>
@@ -58,6 +103,15 @@ namespace userInformation {
         protected global::System.Web.UI.WebControls.DropDownList ddlProvince;
         
         /// <summary>
+        /// rfvProvince control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProvince;
+        
+        /// <summary>
         /// ddlCity control.
         /// </summary>
         /// <remarks>
@@ -65,6 +119,15 @@ namespace userInformation {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCity;
+        
+        /// <summary>
+        /// rfvCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity;
         
         /// <summary>
         /// btnSubmit control.
@@ -85,6 +148,24 @@ namespace userInformation {
         protected global::System.Web.UI.WebControls.Label lblPrint;
         
         /// <summary>
+        /// hidVal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidVal;
+        
+        /// <summary>
+        /// vsForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsForm;
+        
+        /// <summary>
         /// lbRecord control.
         /// </summary>
         /// <remarks>
@@ -94,12 +175,12 @@ namespace userInformation {
         protected global::System.Web.UI.WebControls.ListBox lbRecord;
         
         /// <summary>
-        /// hidVal control.
+        /// Footer1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hidVal;
+        protected global::userInformation.UserControl.Footer Footer1;
     }
 }

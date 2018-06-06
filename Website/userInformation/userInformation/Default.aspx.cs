@@ -11,7 +11,7 @@ namespace userInformation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 /**
  * Submit buton handler
@@ -20,9 +20,11 @@ namespace userInformation
  */
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            int count = 0;
+            Page.Validate();
+            if (Page.IsValid) { 
+            
             string name = tbName.Text;
-            string dateBirth = calBirth.SelectedDate.ToString();
+            string dateBirth = tbDate.ToString();
             string email = tbEmail.Text;
             string province = ddlProvince.SelectedValue.ToString();
             string city = ddlCity.SelectedValue.ToString();
@@ -42,14 +44,15 @@ namespace userInformation
             //clear form
             clearForm();
         }
+        }
 
 
- /**
-  * Drop down menu for province
-  * used to populate the city drop down menu
-  * based on the province selected value
-  * 
-  */
+        /**
+         * Drop down menu for province
+         * used to populate the city drop down menu
+         * based on the province selected value
+         * 
+         */
         protected void ddlProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlCity.Items.Clear();
@@ -87,7 +90,7 @@ namespace userInformation
             tbName.Text = "";
             tbEmail.Text = "";
             //txtName.Text=string.Empty; --->>> another way to clear it
-            calBirth.SelectedDates.Clear();
+            tbDate.Text=string.Empty;
             ddlProvince.ClearSelection();
             ddlCity.Items.Clear();
            
