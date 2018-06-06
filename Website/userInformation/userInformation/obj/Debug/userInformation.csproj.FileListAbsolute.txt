@@ -1,0 +1,9 @@
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\bin\userInformation.dll.config
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\bin\userInformation.dll
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\bin\userInformation.pdb
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\obj\Debug\userInformation.csprojResolveAssemblyReference.cache
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\obj\Debug\userInformation.csproj.CoreCompileInputs.cache
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\obj\Debug\userInformation.dll
+D:\Larisa S\dotNetFramework\Website\userInformation\userInformation\obj\Debug\userInformation.pdb
