@@ -1,0 +1,64 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+    color: darkslategrey;
+    font-size: large;
+    font-family: 'Franklin Gothic';
+    background-color: black;
+}
+
+#blBinding li {
+    display: inline;
+    border: 1px solid aqua;
+    padding: 20px;
+}
+
+section {
+    height: 50vh;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+    section:first-of-type {
+        background-color: gray;
+        color: white;
+        text-transform: uppercase;
+        font-size: 3vw;
+    }
+
+    section:nth-child(2) {
+        background-color: white;
+        color: darkslategray;
+        font-size: 1vw;
+    }
+
+
+tr {
+    padding: 4px;
+    margin: 5px;
+}
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+th {
+    background-color: azure;
+}

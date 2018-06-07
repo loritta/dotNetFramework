@@ -1,0 +1,9 @@
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\bin\LunchOrders.dll.config
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\bin\LunchOrders.dll
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\bin\LunchOrders.pdb
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\obj\Debug\LunchOrders.csprojResolveAssemblyReference.cache
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\obj\Debug\LunchOrders.csproj.CoreCompileInputs.cache
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\obj\Debug\LunchOrders.dll
+D:\Larisa S\dotNetFramework\Website\LunchOrders\LunchOrders\obj\Debug\LunchOrders.pdb

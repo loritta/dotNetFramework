@@ -1,0 +1,9 @@
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\bin\DataSourcesP1.dll.config
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\bin\DataSourcesP1.dll
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\bin\DataSourcesP1.pdb
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\obj\Debug\DataSourcesP1.csprojResolveAssemblyReference.cache
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\obj\Debug\DataSourcesP1.csproj.CoreCompileInputs.cache
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\obj\Debug\DataSourcesP1.dll
+D:\Larisa S\dotNetFramework\Website\DataSourcesP1\DataSourcesP1\obj\Debug\DataSourcesP1.pdb
