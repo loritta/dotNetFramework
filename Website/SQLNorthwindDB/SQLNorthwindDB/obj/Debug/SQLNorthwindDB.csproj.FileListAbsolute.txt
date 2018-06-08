@@ -1,0 +1,9 @@
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\bin\SQLNorthwindDB.dll.config
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\bin\SQLNorthwindDB.dll
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\bin\SQLNorthwindDB.pdb
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\obj\Debug\SQLNorthwindDB.csprojResolveAssemblyReference.cache
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\obj\Debug\SQLNorthwindDB.csproj.CoreCompileInputs.cache
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\obj\Debug\SQLNorthwindDB.dll
+D:\Larisa S\dotNetFramework\Website\SQLNorthwindDB\SQLNorthwindDB\obj\Debug\SQLNorthwindDB.pdb
