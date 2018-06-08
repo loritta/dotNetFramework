@@ -5,3 +5,10 @@ trace="enable"
 meta --->>> keywords, tags.
 
 how to verify the drop down list ?????
+
+column names retrieve from sql:
+SELECT COLUMN_NAME
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Customers'
+
+SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('dbo.Customers') 
