@@ -31,76 +31,49 @@ namespace CheckOutPage {
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
         
         /// <summary>
-        /// TextBox1 control.
+        /// tbEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox tbEmail;
         
         /// <summary>
-        /// rfvEmail control.
+        /// revEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
         
         /// <summary>
-        /// rvEmail control.
+        /// tbReEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rvEmail;
+        protected global::System.Web.UI.WebControls.TextBox tbReEmail;
         
         /// <summary>
-        /// RegularExpressionValidator1 control.
+        /// cvEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.CompareValidator cvEmail;
         
         /// <summary>
-        /// TextBox2 control.
+        /// tbFName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
-        
-        /// <summary>
-        /// rfvReEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvReEmail;
-        
-        /// <summary>
-        /// rvReEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rvReEmail;
-        
-        /// <summary>
-        /// TextBox3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox tbFName;
         
         /// <summary>
         /// rfvFName control.
@@ -112,13 +85,13 @@ namespace CheckOutPage {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFName;
         
         /// <summary>
-        /// TextBox4 control.
+        /// tbLName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox tbLName;
         
         /// <summary>
         /// rfvLName control.
@@ -130,175 +103,175 @@ namespace CheckOutPage {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLName;
         
         /// <summary>
-        /// TextBox5 control.
+        /// tbPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox tbPhone;
         
         /// <summary>
-        /// rfvPhone control.
+        /// revPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhone;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
         
         /// <summary>
-        /// TextBox6 control.
+        /// tbAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox tbAddress;
         
         /// <summary>
-        /// rfvAddress control.
+        /// rfvBAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAddress;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBAddress;
         
         /// <summary>
-        /// TextBox7 control.
+        /// tbCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox tbCity;
         
         /// <summary>
-        /// rfvCity control.
+        /// rfvBCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBCity;
         
         /// <summary>
-        /// DropDownList2 control.
+        /// ddlState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlState;
         
         /// <summary>
-        /// rfvState control.
+        /// rfvBState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvState;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBState;
         
         /// <summary>
-        /// TextBox8 control.
+        /// tbZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox tbZip;
         
         /// <summary>
-        /// rfvZip control.
+        /// revZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvZip;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revZip;
         
         /// <summary>
-        /// CheckBox1 control.
+        /// cbShippingAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBox cbShippingAddress;
         
         /// <summary>
-        /// TextBox9 control.
+        /// tbShipAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox tbShipAddress;
         
         /// <summary>
-        /// rfvAddress0 control.
+        /// rfvSAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAddress0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSAddress;
         
         /// <summary>
-        /// TextBox10 control.
+        /// tbShipCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox tbShipCity;
         
         /// <summary>
-        /// rfvCity0 control.
+        /// rfvSCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSCity;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// ddlShipState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlShipState;
         
         /// <summary>
-        /// rfvState0 control.
+        /// rfvSState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvState0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSState;
         
         /// <summary>
-        /// TextBox11 control.
+        /// tbShipZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox tbShipZip;
         
         /// <summary>
-        /// rfvZip0 control.
+        /// revShipZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvZip0;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revShipZip;
         
         /// <summary>
         /// btnCheckout control.
@@ -310,12 +283,12 @@ namespace CheckOutPage {
         protected global::System.Web.UI.WebControls.Button btnCheckout;
         
         /// <summary>
-        /// ListBox1 control.
+        /// lbResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListBox1;
+        protected global::System.Web.UI.WebControls.ListBox lbResult;
     }
 }

@@ -36,45 +36,42 @@
         <div>
             <h1>Checkout page</h1>
         </div>
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Italic="True" ForeColor="Red" />
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" Font-Italic="True" ForeColor="Red" HeaderText="Please correct these entries:" />
         <h3>Contact Information</h3>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style8">Email address:</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="You should enter a valid e-mail" ForeColor="Red">*</asp:RequiredFieldValidator>
-                    <asp:RangeValidator ID="rvEmail" runat="server" Display="Dynamic" ErrorMessage="RangeValidator" Font-Italic="True" ForeColor="Red">*</asp:RangeValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <asp:TextBox ID="tbEmail" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Email address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="tbEmail" Display="Dynamic" ForeColor="Red">Must be a valid e-mail address</asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style8">Email Re-entry:</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvReEmail" runat="server" ErrorMessage="You should enter a valid e-mail" ForeColor="Red">*</asp:RequiredFieldValidator>
-                    <asp:RangeValidator ID="rvReEmail" runat="server" Display="Dynamic" ErrorMessage="RangeValidator" Font-Italic="True" ForeColor="Red">*</asp:RangeValidator>
+                    <asp:TextBox ID="tbReEmail" runat="server" Width="192px"></asp:TextBox>
+                    <asp:CompareValidator ID="cvEmail" runat="server" ControlToCompare="tbEmail" ControlToValidate="tbReEmail" Display="Dynamic" ErrorMessage="Email re-entry" ForeColor="Red">Must match first e-mail address</asp:CompareValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style5">First Name:</td>
                 <td class="auto-style6">
-                    <asp:TextBox ID="TextBox3" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvFName" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbFName" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvFName" runat="server" ErrorMessage="First Name" ForeColor="Red" ControlToValidate="tbFName" Display="Dynamic">Required</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style8">Last Name:</td>
                 <td>
-                    <asp:TextBox ID="TextBox4" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvLName" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbLName" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvLName" runat="server" ErrorMessage="Last Name" ForeColor="Red" ControlToValidate="tbLName" Display="Dynamic">Required</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style8">Phone Number:</td>
                 <td>
-                    <asp:TextBox ID="TextBox5" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbPhone" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="tbPhone" Display="Dynamic" ErrorMessage="Phone number" ForeColor="Red" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}">Use this format: 123-456-7890</asp:RegularExpressionValidator>
                 </td>
             </tr>
         </table>
@@ -83,72 +80,72 @@
             <tr>
                 <td class="auto-style5">Address:</td>
                 <td class="auto-style6">
-                    <asp:TextBox ID="TextBox6" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbAddress" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvBAddress" runat="server" ErrorMessage="Billing address" ForeColor="Red" ControlToValidate="tbAddress" Display="Dynamic">Required</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style8">City:</td>
                 <td>
-                    <asp:TextBox ID="TextBox7" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvCity" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbCity" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvBCity" runat="server" ErrorMessage="Billing city" ForeColor="Red" ControlToValidate="tbCity" Display="Dynamic">Required</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8">State:</td>
+                <td class="auto-style8">Province:</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList2" runat="server" Width="200px">
+                    <asp:DropDownList ID="ddlState" runat="server" Width="200px">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvState" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvBState" runat="server" ErrorMessage="Billing province" ForeColor="Red" ControlToValidate="ddlState" Display="Dynamic">Required</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style8">Zip Code:</td>
                 <td>
-                    <asp:TextBox ID="TextBox8" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvZip" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbZip" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revZip" runat="server" ControlToValidate="tbZip" Display="Dynamic" ErrorMessage="Billing Zip Code" ForeColor="Red" ValidationExpression="[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ] ?[0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]">Use this format: A1B 2C3</asp:RegularExpressionValidator>
                 </td>
             </tr>
         </table>
         <h3>Shipping Address</h3>
         <p>
-            <asp:CheckBox ID="CheckBox1" runat="server" Text="Same as billing address" />
+            <asp:CheckBox ID="cbShippingAddress" runat="server" Text="Same as billing address" AutoPostBack="True" OnCheckedChanged="CheckBox1_CheckedChanged" />
         </p>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style10">Address:</td>
                 <td class="auto-style11">
-                    <asp:TextBox ID="TextBox9" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvAddress0" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbShipAddress" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvSAddress" runat="server" ErrorMessage="Shipping address" ForeColor="Red" ControlToValidate="tbShipAddress" Display="Dynamic" Enabled="False">Required</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style9">City:</td>
                 <td>
-                    <asp:TextBox ID="TextBox10" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvCity0" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbShipCity" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvSCity" runat="server" ErrorMessage="Shipping city" ForeColor="Red" ControlToValidate="tbShipCity" Display="Dynamic" Enabled="False">Required</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style9">State:</td>
                 <td>
-                    <asp:DropDownList ID="DropDownList1" runat="server" Width="200px">
+                    <asp:DropDownList ID="ddlShipState" runat="server" Width="200px">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="rfvState0" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvSState" runat="server" ErrorMessage="Shipping province" ForeColor="Red" ControlToValidate="ddlShipState" Display="Dynamic" Enabled="False">Required</asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style9">Zip Code:</td>
                 <td>
-                    <asp:TextBox ID="TextBox11" runat="server" Width="192px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvZip0" runat="server" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="tbShipZip" runat="server" Width="192px"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="revShipZip" runat="server" ControlToValidate="tbShipZip" Display="Dynamic" Enabled="False" ErrorMessage="Shipping Zip Code" ForeColor="Red" ValidationExpression="[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ] ?[0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]">Use this format: A1B 2C3</asp:RegularExpressionValidator>
                 </td>
             </tr>
         </table>
         <p>
-            <asp:Button ID="btnCheckout" runat="server" Text="Check out" />
+            <asp:Button ID="btnCheckout" runat="server" Text="Check out" OnClick="btnCheckout_Click" />
         </p>
-        <asp:ListBox ID="ListBox1" runat="server" Height="140px" Width="427px"></asp:ListBox>
+        <asp:ListBox ID="lbResult" runat="server" Height="140px" Width="427px" Visible="False"></asp:ListBox>
     </form>
 </body>
 </html>
