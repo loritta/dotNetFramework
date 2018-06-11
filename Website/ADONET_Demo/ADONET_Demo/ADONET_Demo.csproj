@@ -68,10 +68,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddShipper.aspx" />
+    <Content Include="AllShippers.aspx" />
     <Content Include="SupliersSearch.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddShipper.aspx.cs">
+      <DependentUpon>AddShipper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddShipper.aspx.designer.cs">
+      <DependentUpon>AddShipper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllShippers.aspx.cs">
+      <DependentUpon>AllShippers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllShippers.aspx.designer.cs">
+      <DependentUpon>AllShippers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupliersSearch.aspx.cs">
       <DependentUpon>SupliersSearch.aspx</DependentUpon>
