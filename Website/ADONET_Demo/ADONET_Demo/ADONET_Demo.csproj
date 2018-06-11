@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include="AddShipper.aspx" />
     <Content Include="AllShippers.aspx" />
+    <Content Include="OrderDetailsSearch.aspx" />
     <Content Include="SupliersSearch.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -87,6 +88,13 @@
     </Compile>
     <Compile Include="AllShippers.aspx.designer.cs">
       <DependentUpon>AllShippers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetailsSearch.aspx.cs">
+      <DependentUpon>OrderDetailsSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderDetailsSearch.aspx.designer.cs">
+      <DependentUpon>OrderDetailsSearch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupliersSearch.aspx.cs">

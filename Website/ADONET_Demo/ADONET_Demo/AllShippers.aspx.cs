@@ -32,7 +32,7 @@ namespace ADONET_Demo
                     gvShippers.DataSource = reader;
                     gvShippers.DataBind();
                 }
-                catch (Exception er)
+                catch (Exception)
                 {
                     throw;
                 }
