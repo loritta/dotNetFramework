@@ -1,0 +1,10 @@
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\bin\CheckOutPage.dll.config
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\bin\CheckOutPage.dll
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\bin\CheckOutPage.pdb
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\obj\Debug\CheckOutPage.csprojResolveAssemblyReference.cache
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\obj\Debug\CheckOutPage.csproj.CoreCompileInputs.cache
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\obj\Debug\CheckOutPage.csproj.CopyComplete
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\obj\Debug\CheckOutPage.dll
+B:\Larisa\ASPdotNET\dotNetFramework\Website\CheckOutPage\CheckOutPage\obj\Debug\CheckOutPage.pdb
