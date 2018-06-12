@@ -30,19 +30,21 @@
         <h4>List of customers:</h4>
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="ODSCustomers" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="ODSCustomers" ForeColor="#333333" GridLines="None" DataKeyNames="CustomerID">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:BoundField DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName" />
-                <asp:BoundField DataField="ContactName" HeaderText="Contact Name" SortExpression="ContactName" />
-                <asp:BoundField DataField="ContactTitle" HeaderText="Contact Title" SortExpression="ContactTitle" />
-                <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
-                <asp:BoundField DataField="Fax" HeaderText="Fax" SortExpression="Fax" />
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" SortExpression="CustomerID" />
+                <asp:BoundField DataField="CompanyName" HeaderText="CompanyName" SortExpression="CompanyName" />
+                <asp:BoundField DataField="ContactName" HeaderText="ContactName" SortExpression="ContactName" />
+                <asp:BoundField DataField="ContactTitle" HeaderText="ContactTitle" SortExpression="ContactTitle" />
                 <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                 <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                 <asp:BoundField DataField="Region" HeaderText="Region" SortExpression="Region" />
-                <asp:BoundField DataField="PostalCode" HeaderText="Postal Code" SortExpression="PostalCode" />
+                <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
                 <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
+                <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                <asp:BoundField DataField="Fax" HeaderText="Fax" SortExpression="Fax" />
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

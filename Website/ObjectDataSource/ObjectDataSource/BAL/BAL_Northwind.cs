@@ -58,6 +58,12 @@ namespace ObjectDataSource.BAL
 
         }
 
+        /*
+        * Upon selection of a date the details of that order will be displayed in a
+        * grid view,
+        * 
+        * Method: will get orders list for a specific date
+        * */
         public List<Order> getOrdersbyDate(DateTime date)
         {
             using (var context = new DatabaseDataContext())
