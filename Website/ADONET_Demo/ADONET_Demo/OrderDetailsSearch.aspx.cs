@@ -42,14 +42,29 @@ namespace ADONET_Demo
                 dvOrder.DataSource = reader;
                 dvOrder.DataBind();
                 reader.Close();
+                /**
+                 * The switcch will build the query for customer or shipper details
+                 * after that the right query will be executed
+                 * */
                 switch (ddlCustomerShipper.SelectedValue)
                 {
                     case "Customer":
-                        string customerID = dvOrder.Rows[1].Cells[1].Text;
+                        //getting the customer id from the detailed view
+                        string customerID = ""; //string customerID = dvOrder.Rows[1].Cells[1].Text; //hardcoded
+                        for (int i = 0; i < dvOrder.Rows.Count; i++)
+                        {
+                            if (dvOrder.Rows[i].Cells[0].Text == "CustomerID")
+                                customerID = dvOrder.Rows[i].Cells[1].Text;
+                        }
                         query = "select * from Customers where CustomerID='" + customerID + "'";
                         break;
                     case "Shipper":
-                        string shipperID = dvOrder.Rows[6].Cells[1].Text;
+                        string shipperID = ""//string shipperID = dvOrder.Rows[6].Cells[1].Text; //hardcoded
+                             for (int i = 0; i < dvOrder.Rows.Count; i++)
+                        {
+                            if (dvOrder.Rows[i].Cells[0].Text == "ShipVia")
+                                shipperID = dvOrder.Rows[i].Cells[1].Text;
+                        }
                         query = "select * from Shippers where ShipperID =" + shipperID;
                         break;
                     default:
@@ -62,7 +77,7 @@ namespace ADONET_Demo
 
                 for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    lbxCustomerShipper.Items.Add(i + "." + reader[i].ToString());
+                    lbxCustomerShipper.Items.Add(reader.GetName(i) + "." + reader[i].ToString());
                 }
 
                         con.Close();
