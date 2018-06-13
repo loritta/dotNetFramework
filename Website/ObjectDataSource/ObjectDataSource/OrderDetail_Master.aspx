@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OrderCalendarSearch.aspx.cs" Inherits="ObjectDataSource.OrderCalendarSearch" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OrderDetail_Master.aspx.cs" Inherits="ObjectDataSource.OrderDetail_Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<div>
         <div>
             <h1>Order search</h1>
             <br />
@@ -86,6 +80,4 @@
             </asp:ObjectDataSource>
         </p>
             </div>
-    </form>
-</body>
-</html>
+</asp:Content>

@@ -75,5 +75,38 @@ namespace ObjectDataSource.BAL
             }
         }
 
+        /*
+        * Upon selection of an order the products of that order will be displayed in a
+        * grid view,
+        * 
+        * Method: will get product list for a specific order
+        * */
+        public List<Product> getProductsbyOrder(int orderID)
+        {
+            using (var context = new DatabaseDataContext())
+            {
+                List<Product> products = (from data in context.Order_Details
+                                          join product in context.Products 
+                                          on data.ProductID equals product.ProductID
+                                      where data.OrderID == orderID
+                                      select product).ToList();
+                return products;
+            }
+        }
+        /*
+        public object getProductsbyOrderWithDetails(int orderID)
+        {
+            using (var context = new DatabaseDataContext())
+            {
+                var products = (from data in context.Order_Details
+                                          join product in context.Products
+                                          on data.ProductID equals product.ProductID
+                                          where data.OrderID == orderID
+                                          select new { data.ProductID, product.ProductName, data.Quantity, data.Discount, data.UnitPrice }).ToList();
+               
+                return products;
+            }
+        }*/
+
     }
 }

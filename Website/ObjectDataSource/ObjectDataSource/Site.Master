@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ObjectDataSource.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Northwind Application</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!---Header-->
+    <div style ="float:left; width:60%; text-align:left; font-size:18pt; font-weight:bold; color:#3333CC; ">
+        NorthWind Web Application
+    </div>
+    <div style ="float:right; width:38%; text-align:right;  ">
+        
+        <asp:Label ID="lblDate" runat="server" Font-Bold="True" ForeColor="#3333CC"></asp:Label>
+        
+    </div>
+    <br />
+    <!--Main-->
+    <form id="form1" runat="server">
+    
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <!--Footer -->
+    &copy 2018
+</body>
+</html>
