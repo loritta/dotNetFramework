@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Exam1.Pages.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Header -->
+    <div style="float:left;width:50%;text-align:left;font-size:18pt;font-weight:bold; color:#003399">
+        Exam 1 fun exercises
+    </div >
+    <div style="float:right;width:47%;text-align:right;">
+        <asp:Label ID="lblDate" runat="server" Font-Bold="True" ForeColor="#003399"></asp:Label>
+    </div >
+    <br />
+    <!-- Main Body -->
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+     <!-- Footer -->
+    &copy; 2018 | IPD-12 ASP.NET Class with Aref
+</body>
+</html>

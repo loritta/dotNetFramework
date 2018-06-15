@@ -14,7 +14,7 @@ namespace ADONET_Demo
     public partial class AddShipper : System.Web.UI.Page
     {
         private string ConString = ConfigurationManager.ConnectionStrings
-           ["NORTHWNDConnectionString_ADO"].ConnectionString;
+           [""].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
         {
