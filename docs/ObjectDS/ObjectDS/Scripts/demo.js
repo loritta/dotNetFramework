@@ -1,0 +1,1 @@
+﻿alert("Order dates start from July 1996");

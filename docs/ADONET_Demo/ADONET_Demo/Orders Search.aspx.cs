@@ -36,28 +36,43 @@ namespace ADONET_Demo
                 dvOrder.DataSource = reader;
                 dvOrder.DataBind();
                 reader.Close();
-                //Get either customer or shipper
+                /*  Get either customer or shipper
+                 *  The switch will build the query for customer details or shipper
+                 *  after that the command will be executed.
+                 */
                 switch (ddlOptions.SelectedValue)
                 {
                     case "Customers":
-                        string customerID = dvOrder.Rows[1].Cells[1].Text;
-                        query = "select * from Customers where CustomerID='" + customerID + "'";
-                        cmd = new SqlCommand(query, con);
-                        reader = cmd.ExecuteReader();
-                        reader.Read();
-
-                        for (int i = 0; i < reader.FieldCount; i++)
+                        //getting the customerID from the details view.
+                        //string customerID = dvOrder.Rows[1].Cells[1].Text;
+                        string customerID ="";
+                        for (int i = 0; i < dvOrder.Rows.Count; i++)
                         {
-                            lbOption.Items.Add(reader[i].ToString());
+                            if(dvOrder.Rows[i].Cells[0].Text == "CustomerID")
+                                customerID = dvOrder.Rows[i].Cells[1].Text;
                         }
-                        
+                        query = "select * from Customers where CustomerID='" + customerID + "'";
                         break;
                     case "Shippers":
-                        string shipperID = dvOrder.Rows[6].Cells[1].Text;
+                        //string shipperID = dvOrder.Rows[6].Cells[1].Text;
+                        string shipperID = "";
+                        for (int i = 0; i < dvOrder.Rows.Count; i++)
+                        {
+                            if (dvOrder.Rows[i].Cells[0].Text == "ShipVia")
+                                shipperID = dvOrder.Rows[i].Cells[1].Text;
+                        }
+                        query = "select * from Shippers where ShipperID=" + shipperID;
                         break;
                 }
-                
-                
+
+                cmd = new SqlCommand(query, con);
+                reader = cmd.ExecuteReader();
+                reader.Read();
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    lbOption.Items.Add(reader.GetName(i) + ". " + reader[i].ToString());
+                }
+
                 con.Close();
             }
             catch (Exception er)

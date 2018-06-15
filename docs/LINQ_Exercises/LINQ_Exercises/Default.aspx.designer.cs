@@ -31,6 +31,15 @@ namespace LINQ_Exercises {
         protected global::System.Web.UI.WebControls.DropDownList ddlLists;
         
         /// <summary>
+        /// gvDisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvDisplay;
+        
+        /// <summary>
         /// ListBox1 control.
         /// </summary>
         /// <remarks>
@@ -40,12 +49,12 @@ namespace LINQ_Exercises {
         protected global::System.Web.UI.WebControls.ListBox ListBox1;
         
         /// <summary>
-        /// gvDisplay control.
+        /// result control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvDisplay;
+        protected global::System.Web.UI.WebControls.TextBox result;
     }
 }

@@ -65,25 +65,115 @@ namespace LINQ_Exercises
         protected void ddlLists_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (ddlLists.SelectedIndex == 1)
+            {
                 gvDisplay.DataSource = studentList;
+            }
+                
             else if (ddlLists.SelectedIndex == 2)
                 gvDisplay.DataSource = teacherList;
             else if (ddlLists.SelectedIndex == 3)
                 gvDisplay.DataSource = courseList;
 
             gvDisplay.DataBind();
+            ListBox1.SelectedIndex = 0;
         }
 
 
 
         protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            result.Text = "";
             switch (ListBox1.SelectedIndex)
             {
                 case 1://1: Students who are under 18 years of age (in order of age)
                     var student18 = from s in studentList where s.Age < 18 orderby s.Age select s;
-                    gvDisplay.DataSource = student18;
-                    gvDisplay.DataBind();
+                    //gvDisplay.DataSource = student18;
+                    //gvDisplay.DataBind();
+                    foreach (var s in student18)
+                    {
+                        result.Text += string.Format("- {0}, {1}, {2} \n", s.Last,s.First, s.Age);
+                    }
+                    break;
+                case 2:
+                    //Students who are teenagers (alphabetical order by last name)
+                    var studentTeen = from s in studentList where s.Age > 12 && s.Age < 20 orderby s.Last select s;
+                    foreach (var s in studentTeen)
+                    {
+                        result.Text += string.Format("- {0}, {1}, {2} \n", s.Last, s.First, s.Age);
+                    }
+                    break;
+                case 3:
+                    //Students who scored 80 or more in their last test (order by score descending)
+                    var studnetPassedLastTest = from s in studentList where s.Scores[3] >= 80 orderby s.Scores[3] descending select s;
+                    foreach (var s in studnetPassedLastTest)
+                    {
+                        result.Text += string.Format("- {0}, {1}, {2} \n", s.Last, s.First, s.Scores[3]);
+                    }
+                    break;
+                case 4:
+                    //Students who scored over 320 marks in total (across all their tests)
+                    var studentTotalScore = from s in studentList
+                                            where (s.Scores.Sum()) >= 320 select s;
+                    foreach (var s in studentTotalScore)
+                    {
+                        result.Text += string.Format("- {0}, {1}, {2} \n", s.Last, s.First, s.Scores.Sum());
+                    }
+                    break;
+                case 5:
+                    //Students who scored at least 60 in all of their tests
+                    var studentsAllOver60 = from s in studentList
+                                            where (s.Scores[0] >= 60 && s.Scores[1] >= 60 && s.Scores[2] >= 60 && s.Scores[3] >= 60)
+                                            select s;
+                    foreach (var s in studentsAllOver60)
+                    {
+                        result.Text += string.Format("- {0}, {1}, {2}, {3}, {4}, {5} \n", s.Last, s.First, s.Scores[0], s.Scores[1], s.Scores[2], s.Scores[3]);
+                    }
+                    break;
+                case 6:
+                    //Students grouped by first letter of their last name
+                    var sBylastName = from s in studentList
+                                      group s by s.Last[0] into studentGroup
+                                      orderby studentGroup.Key
+                                      select studentGroup;
+                    foreach (var group in sBylastName)
+                    {
+                        result.Text += group.Key +"\n";
+                        foreach (var s in group)
+                        {
+                            result.Text += string.Format("- {0}, {1} \n", s.Last, s.First);
+                        }
+                    }
+                    break;
+                case 7:
+                    //Average score of each test
+                    var StudentTest1AVG = from s in studentList select s.Scores[0];
+                    double test1Avg = StudentTest1AVG.Average();
+                    result.Text += "Avg score for test 1 = " + test1Avg.ToString("0.00");
+                    var StudentTest2AVG = from s in studentList select s.Scores[1];
+                    double test2Avg = StudentTest2AVG.Average();
+                    result.Text += "Avg score for test 2 = " + test2Avg.ToString("0.00");
+                    var StudentTest3AVG = from s in studentList select s.Scores[2];
+                    double test3Avg = StudentTest3AVG.Average();
+                    result.Text += "Avg score for test 3 = " + test3Avg.ToString("0.00");
+                    var StudentTest4AVG = from s in studentList select s.Scores[3];
+                    double test4Avg = StudentTest4AVG.Average();
+                    result.Text += "Avg score for test 4 = " + test4Avg.ToString("0.00");
+                    break;
+                case 8:
+                    //Students who are also teachers
+
+                    break;
+                case 9:
+                    //Courses of a duration of 15 weeks
+
+                    break;
+                case 10:
+                    //Courses held in the Winter semester (order by duration)
+
+                    break;
+                case 11:
+                    //Courses grouped by semester 
+
                     break;
                 default:
                     break;

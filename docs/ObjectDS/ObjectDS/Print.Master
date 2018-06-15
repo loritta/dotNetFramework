@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Print.master.cs" Inherits="ObjectDS.Print" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Northwind - Print Friendly Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    *** This is a printable format ****
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="mainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
