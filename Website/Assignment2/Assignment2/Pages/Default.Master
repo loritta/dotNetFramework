@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="Assignment2.Pages.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<style type="text/css">
+		.auto-style1 {
+			width: 100%;
+		}
+		.menu {
+			width: 1036px;
+		}
+	</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="menu">
+			<tr>
+				<td class="menu">
+					<asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Pages/Home.aspx">Home</asp:HyperLink>
+				</td>
+				<td class="menu">
+					<asp:HyperLink ID="hlCustomers" runat="server" NavigateUrl="~/Pages/Customers.aspx">Customers</asp:HyperLink>
+				</td>
+				<td class="menu">
+					<asp:HyperLink ID="hlRentMedia" runat="server" NavigateUrl="~/Pages/RentMedia.aspx">Rent Media</asp:HyperLink>
+				</td>
+				<td class="menu">
+					<asp:HyperLink ID="hlNewCustomer" runat="server" NavigateUrl="~/Pages/NewCustomer.aspx">New Customer</asp:HyperLink>
+				</td>
+				<td class="menu">
+					<asp:HyperLink ID="hlNewMedia" runat="server" NavigateUrl="~/Pages/NewMedia.aspx">New Media</asp:HyperLink>
+				</td>
+			</tr>
+		</table>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
