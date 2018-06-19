@@ -62,3 +62,4 @@ B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment2\Assignment2\obj\Debug\As
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment2\Assignment2\obj\Debug\Assignment2.pdb
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment2\Assignment2\obj\Debug\Assignment2.Migrations.initialCommit.resources
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment2\Assignment2\obj\Debug\Assignment2.csproj.GenerateResource.cache
+B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment2\Assignment2\obj\Debug\Assignment2.Migrations.NotRequiredListOfRental.resources

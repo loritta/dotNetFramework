@@ -14,17 +14,22 @@ namespace Assignment2.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None; 
 
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             Customer customer = new Customer();
+            
             customer.FirstName = tbFName.Text;
             customer.LastName = tbLName.Text;
             customer.Address = tbAddress.Text;
             customer.PhoneNumber = tbPhoneNumber.Text;
-            AddNewCustomer(customer);
+            VideoRentalStoreRepository r = new VideoRentalStoreRepository();
+            r.AddNewCustomer(customer);
+            Response.Redirect("~/Pages/Home.aspx");
+
         }
     }
 }

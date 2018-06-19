@@ -104,6 +104,10 @@
     <Compile Include="Migrations\201806170547473_initialCommit.Designer.cs">
       <DependentUpon>201806170547473_initialCommit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806190034476_NotRequiredListOfRental.cs" />
+    <Compile Include="Migrations\201806190034476_NotRequiredListOfRental.Designer.cs">
+      <DependentUpon>201806190034476_NotRequiredListOfRental.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Media.cs" />
@@ -160,6 +164,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806170547473_initialCommit.resx">
       <DependentUpon>201806170547473_initialCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806190034476_NotRequiredListOfRental.resx">
+      <DependentUpon>201806190034476_NotRequiredListOfRental.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

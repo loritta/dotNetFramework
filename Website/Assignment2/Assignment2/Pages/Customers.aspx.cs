@@ -11,7 +11,16 @@ namespace Assignment2.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                if (Request.QueryString["message"] == null)
+                    return;
+                else
+                {
+                    string message = Request.QueryString["message"];
+                    Response.Write(message);
+                }
+            }
         }
 
         protected void btnRentMedia_Click(object sender, EventArgs e)

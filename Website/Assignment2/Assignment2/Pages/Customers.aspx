@@ -43,6 +43,7 @@
 				<asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
 				<asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
 				<asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" SortExpression="PhoneNumber" />
+				<asp:CommandField ShowEditButton="True" />
 			</Fields>
 			<FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
 			<HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -56,6 +57,11 @@
 			<UpdateParameters>
 				<asp:Parameter Name="originalCustomer" Type="Object" />
 				<asp:Parameter Name="customer" Type="Object" />
+				<asp:Parameter Name="ID" Type="Int32" />
+				<asp:Parameter Name="FirstName" Type="String" />
+				<asp:Parameter Name="LastName" Type="String" />
+				<asp:Parameter Name="Address" Type="String" />
+				<asp:Parameter Name="PhoneNumber" Type="String" />
 			</UpdateParameters>
 		</asp:ObjectDataSource>
 	</p>

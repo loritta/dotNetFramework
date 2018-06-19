@@ -21,7 +21,7 @@ namespace Assignment2.Models
         [Required]
         [StringLength(50)]
         public string PhoneNumber { get; set; }
-        [Required]
+     
         public List<RentalRecord> ListOfRentalRecords { get; set; }
 
         /*ID

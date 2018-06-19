@@ -12,7 +12,6 @@ namespace Assignment2.Models
         [Required]
         public DateTime RentalDate { get; set; }
         [Required]
-        
         public List<Media> ListOfRentedMedias { get; set; }
 
         /*ID
