@@ -1,0 +1,34 @@
+﻿@model IEnumerable<VidPlace.Models.Media>
+@{
+    ViewBag.Title = "IndexGetMedia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexGetMedia</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+        </tr>
+    </thead>
+    @if (!Model.Any())
+    {
+        <p>There is no media available.</p>
+    }
+    else
+    {
+        <tbody>
+            @foreach (var media in Model)
+            {
+                <tr>
+                    <td>
+                        @media.Name
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    }
+
+</table> 

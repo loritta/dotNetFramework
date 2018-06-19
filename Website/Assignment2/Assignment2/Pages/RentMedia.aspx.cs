@@ -51,17 +51,26 @@ namespace Assignment2.Pages
                 int customerID = int.Parse(Request.QueryString["customerID"]);
                 VideoRentalStoreRepository v = new VideoRentalStoreRepository();
                 List<int> mediaID = new List<int>();
-                foreach (ListItem lst in cblResult.Items)
+                if (cblResult.Items.Count != 0)
                 {
-                    if (lst.Selected == true)
+                    foreach (ListItem lst in cblResult.Items)
                     {
-                        mediaID.Add(int.Parse(lst.Value));
+                        if (lst.Selected == true)
+                        {
+                            mediaID.Add(int.Parse(lst.Value));
+                        }
                     }
-
+                    v.AddRentalRecord(customerID, mediaID);
                 }
-                v.AddRentalRecord(customerID, mediaID);
+                else
+                {
+                    Response.Write("There is no infromation to register.");
+                };
+               
+               
 
             }
         }
+        
     }
 }

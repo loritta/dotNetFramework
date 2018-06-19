@@ -120,3 +120,8 @@ D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.csproj.
 D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.csproj.CopyComplete
 D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.dll
 D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.pdb
+D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.InitialMigration.resources
+D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.csproj.GenerateResource.cache
+D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.AddSubscriptionForCustomer.resources
+D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.AddMembership.resources
+D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.PopulateMemebershipTypes.resources
