@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VidPlace.Models;
+using System.Data.Entity;
 
 namespace VidPlace.Controllers
 {
@@ -23,14 +24,14 @@ namespace VidPlace.Controllers
         public ActionResult Index()
         {
             // return View(getCustomers());
-            return View(_context.Customers.ToList());
+            return View(_context.Customers.Include(c=>c.Membership).ToList());
         }
 
         // GET: Customers/Detail
         public ActionResult Details(int ID)
         {
             //var customer = getCustomers().SingleOrDefault(c=>c.ID==ID);
-            var customer = _context.Customers.SingleOrDefault(c => c.ID == ID);
+            var customer = _context.Customers.Include(c=>c.Membership).SingleOrDefault(c => c.ID == ID);
             if (customer == null)
             {
                 return HttpNotFound();

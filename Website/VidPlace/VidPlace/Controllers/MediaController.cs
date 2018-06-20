@@ -5,11 +5,22 @@ using System.Web;
 using System.Web.Mvc;
 using VidPlace.Models;
 using VidPlace.ViewModels;
+using System.Data.Entity;
 
 namespace VidPlace.Controllers
 {
     public class MediaController : Controller
     {
+        //DB Context Object
+        private ApplicationDbContext _context;
+
+        //class Constructor
+        //ctor -short for constructor
+        public MediaController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
         // GET: Media
         /*public ActionResult Index()
         {
@@ -17,7 +28,27 @@ namespace VidPlace.Controllers
         }*/
         public ActionResult IndexGetMedia()
         {
-            return View(getMedias());
+            //return View(getMedias());
+            return View(_context.Media.Include(m => m.Genre).ToList());
+        }
+
+        // GET: \Media/Detail
+        public ActionResult Details(int ID)
+        {
+            //var customer = getCustomers().SingleOrDefault(c=>c.ID==ID);
+            var media = _context.Media
+                .Include(m => m.Genre)
+                .Include(m =>m.MediaType)
+                .SingleOrDefault(m => m.ID == ID);
+            if (media == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(media);
+            }
+
         }
 
 

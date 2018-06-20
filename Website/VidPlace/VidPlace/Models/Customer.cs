@@ -15,8 +15,9 @@ namespace VidPlace.Models
         public string Name { get; set; }
         [Required]
         public bool IsSubscribedToNewsletter { get; set; }
-
+        //this is the reference to the class Membership inside the Customer
         public Membership Membership { get; set; }
         public byte MembershipID { get; set; }
+        public DateTime? BirthDate { get; set; }
     }
 }
