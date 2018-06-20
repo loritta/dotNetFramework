@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using VidPlace.Models;
 using System.Data.Entity;
+using VidPlace.ViewModels;
 
 namespace VidPlace.Controllers
 {
@@ -41,6 +42,17 @@ namespace VidPlace.Controllers
                 return View(customer);
             }
             
+        }
+        public ActionResult New()
+        {
+            //var customer = new Customer();
+            var viewModel = new CustomerFromViewModel()
+            {
+                Memberships = _context.Memberships.ToList()
+               
+            };
+
+            return View("CustomerForm", viewModel);
         }
 
         private IEnumerable<Customer> getCustomers()

@@ -12,12 +12,22 @@ namespace VidPlace.Models
         public int ID { get; set; }
         [Required]
         [StringLength(255)]
+        [Display(Name = "Customer Name")]
         public string Name { get; set; }
+
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
         [Required]
         public bool IsSubscribedToNewsletter { get; set; }
         //this is the reference to the class Membership inside the Customer
+
         public Membership Membership { get; set; }
+
+        [Display(Name = "Membership Type")]
         public byte MembershipID { get; set; }
+
+        [Display(Name = "Birth Date")]
         public DateTime? BirthDate { get; set; }
     }
 }

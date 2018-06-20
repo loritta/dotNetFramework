@@ -16,6 +16,8 @@ namespace VidPlace.Models
         
         [Required]
         public MediaType MediaType { get; set; }
+
+        [Display(Name = "Media Type")]
         public int MediaTypeID { get; set; }
 
         [Required]
@@ -23,12 +25,15 @@ namespace VidPlace.Models
         public int GenreID { get; set; }
 
         [Required]
+        [Display(Name = "Date of release")]
         public DateTime ReleaseDate { get; set; }
 
         [Required]
+        [Display(Name = "The date it was added")]
         public DateTime DateAdded { get; set; }
 
         [Required]
+        [Display(Name = "Number in stock")]
         public int NumberInStock { get; set; }
     }
 }

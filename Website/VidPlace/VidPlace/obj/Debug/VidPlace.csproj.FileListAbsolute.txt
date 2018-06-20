@@ -140,3 +140,4 @@ D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrati
 D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.MediaTypeAndMediaGenreFKToMedia.resources
 D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.PopulateGenreAndMediaType2.resources
 D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.ReleaseDateDateAddedNumberInStockToMedia.resources
+D:\Larisa S\dotNetFramework\Website\VidPlace\VidPlace\obj\Debug\VidPlace.Migrations.CustomerAddress.resources

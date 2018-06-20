@@ -10,6 +10,7 @@ namespace VidPlace.Models
     {
         public int ID { get; set; }
         [Required]
+        [Display(Name = "Movie Genre")]
         public string Name { get; set; }
     }
 }

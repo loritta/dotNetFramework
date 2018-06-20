@@ -23,6 +23,7 @@ namespace VidPlace.Models
         //DBSet properties
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Media> Media { get; set; }
+        public DbSet<Membership> Memberships { get; set; }
 
 
         public ApplicationDbContext()
