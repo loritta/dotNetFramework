@@ -8,7 +8,7 @@ namespace VidPlace.ViewModels
 {
     public class CustomerFromViewModel
     {
-        public Customer Customers { get; set; }
+        public Customer Customer { get; set; }
         public IEnumerable< Membership> Memberships { get; set; }
     }
 }

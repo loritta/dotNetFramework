@@ -14,6 +14,8 @@ namespace VidPlace.Controllers
         //DB Context Object
         private ApplicationDbContext _context;
 
+        public List<Membership> Memberships { get; private set; }
+
         //class Constructor
         //ctor -short for constructor
         public CustomersController()
@@ -25,14 +27,14 @@ namespace VidPlace.Controllers
         public ActionResult Index()
         {
             // return View(getCustomers());
-            return View(_context.Customers.Include(c=>c.Membership).ToList());
+            return View(_context.Customers.Include(c => c.Membership).ToList());
         }
 
         // GET: Customers/Detail
         public ActionResult Details(int ID)
         {
             //var customer = getCustomers().SingleOrDefault(c=>c.ID==ID);
-            var customer = _context.Customers.Include(c=>c.Membership).SingleOrDefault(c => c.ID == ID);
+            var customer = _context.Customers.Include(c => c.Membership).SingleOrDefault(c => c.ID == ID);
             if (customer == null)
             {
                 return HttpNotFound();
@@ -41,7 +43,6 @@ namespace VidPlace.Controllers
             {
                 return View(customer);
             }
-            
         }
 
 
@@ -50,8 +51,8 @@ namespace VidPlace.Controllers
             //var customer = new Customer();
             var viewModel = new CustomerFromViewModel()
             {
+                Customer = new Customer(),
                 Memberships = _context.Memberships.ToList()
-               
             };
 
             return View("CustomerForm", viewModel);
@@ -60,15 +61,58 @@ namespace VidPlace.Controllers
         //Saving action into DB
         //Post action
         [HttpPost]
-        public ActionResult Save(Customer customer )
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Customer customer)
         {
-            _context.Customers.Add(customer);
-            _context.SaveChanges();
+            //Server side validation
+            if (!ModelState.IsValid)
+            {
+                //The form is not valid => return same form to the user
+                var viewModel = new CustomerFromViewModel
+                {
+                    Customer = customer,
+                    Memberships = _context.Memberships.ToList()
+                };
+                return View("CustomerForm", viewModel);
+            }
 
+            if (customer.ID == 0)
+            {
+                _context.Customers.Add(customer);
+            }
+            else
+            {
+                var customerInDB = _context.Customers.Single(c => c.ID == customer.ID);
+                /*
+                 * TryUpdateModel(customerInDB);
+                 * This method has a security flow
+                */
+                //Mannually update the field
+                customerInDB.Name = customer.Name;
+                customerInDB.Address = customer.Address;
+                customerInDB.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+                customerInDB.MembershipID = customer.MembershipID;
+                customerInDB.BirthDate = customer.BirthDate;
+                
+            }
+            _context.SaveChanges();
             return RedirectToAction("Index", "Customers");
         }
+        public ActionResult Edit(int ID)
+        {
+            var customerInDB = _context.Customers.SingleOrDefault(c => c.ID == ID);
+            if (customerInDB == null)
+                return HttpNotFound();
 
-        private IEnumerable<Customer> getCustomers()
+            var viewModel = new CustomerFromViewModel
+            {
+                Customer = customerInDB,
+                Memberships = _context.Memberships.ToList()
+            };
+            return View("CustomerForm", viewModel);
+        }
+
+       /* private IEnumerable<Customer> getCustomers()
         {
             var customers = new List<Customer>
             {
@@ -77,7 +121,7 @@ namespace VidPlace.Controllers
                 new Customer(){ID=3,Name = "Jimmy Poo"},
             };
             return customers;
-        }
-        
+        }*/
+
     }
 }

@@ -32,6 +32,75 @@ namespace VidPlace.Controllers
             return View(_context.Media.Include(m => m.Genre).ToList());
         }
 
+        public ActionResult New()
+        {
+            var viewModel = new MediaFormViewModel()
+            {
+                Media = new Media(),
+                MediaTypes = _context.MediaTypes.ToList(),
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("New", viewModel);
+        }
+
+        //Saving action into DB
+        //Post action
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(Media media)
+        {
+            //Server side validation
+            if (!ModelState.IsValid)
+            {
+                //The form is not valid => return same form to the user
+                var viewModel = new MediaFormViewModel()
+                {
+                    Media = new Media(),
+                    MediaTypes = _context.MediaTypes.ToList(),
+                    Genres = _context.Genres.ToList()
+                };
+                return View("New", viewModel);
+            }
+
+            if (media.ID == 0)
+            {
+                _context.Media.Add(media);
+            }
+            else
+            {
+                var mediarInDB = _context.Media.Single(c => c.ID == media.ID);
+                /*
+                 * TryUpdateModel(customerInDB);
+                 * This method has a security flow
+                */
+                //Mannually update the field
+               mediarInDB.Name = media.Name;
+                mediarInDB.GenreID = media.GenreID;
+                mediarInDB.MediaTypeID = media.MediaTypeID;
+                mediarInDB.NumberInStock = media.NumberInStock;
+                mediarInDB.ReleaseDate = media.ReleaseDate;
+                mediarInDB.DateAdded = DateTime.Now;
+
+            }
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Media");
+        }
+        public ActionResult Edit(int ID)
+        {
+            var mediaInDB = _context.Media.SingleOrDefault(c => c.ID == ID);
+            if (mediaInDB == null)
+                return HttpNotFound();
+
+            var viewModel = new MediaFormViewModel
+            {
+                Media = mediaInDB,
+                MediaTypes = _context.MediaTypes.ToList(),
+                Genres = _context.Genres.ToList()
+            };
+            return View("New", viewModel);
+        }
+
         // GET: \Media/Detail
         public ActionResult Details(int ID)
         {

@@ -10,7 +10,7 @@ namespace VidPlace.Models
     {
 
         public int ID { get; set; }
-        [Required]
+        [Required (ErrorMessage ="Please enter the customer's name")]
         [StringLength(255)]
         [Display(Name = "Customer Name")]
         public string Name { get; set; }
@@ -26,7 +26,7 @@ namespace VidPlace.Models
 
         [Display(Name = "Membership Type")]
         public byte MembershipID { get; set; }
-
+        [Min18YearsIfMember]
         [Display(Name = "Birth Date")]
         public DateTime? BirthDate { get; set; }
     }
