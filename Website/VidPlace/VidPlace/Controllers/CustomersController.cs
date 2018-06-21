@@ -62,14 +62,10 @@ namespace VidPlace.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer )
         {
-            //var customer = new Customer();
-            var viewModel = new CustomerFromViewModel()
-            {
-                Memberships = _context.Memberships.ToList()
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
 
-            };
-
-            return View("CustomerForm", viewModel);
+            return RedirectToAction("Index", "Customers");
         }
 
         private IEnumerable<Customer> getCustomers()
