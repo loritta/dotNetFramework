@@ -43,6 +43,8 @@ namespace VidPlace.Controllers
             }
             
         }
+
+
         public ActionResult New()
         {
             //var customer = new Customer();
@@ -50,6 +52,21 @@ namespace VidPlace.Controllers
             {
                 Memberships = _context.Memberships.ToList()
                
+            };
+
+            return View("CustomerForm", viewModel);
+        }
+
+        //Saving action into DB
+        //Post action
+        [HttpPost]
+        public ActionResult Save(Customer customer )
+        {
+            //var customer = new Customer();
+            var viewModel = new CustomerFromViewModel()
+            {
+                Memberships = _context.Memberships.ToList()
+
             };
 
             return View("CustomerForm", viewModel);
