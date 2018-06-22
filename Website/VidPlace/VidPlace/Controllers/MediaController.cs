@@ -133,7 +133,7 @@ namespace VidPlace.Controllers
         }
 
 
-        // GET: Random
+        /*// GET: Random
         public ActionResult Random()
         {
             var media = new Media();
@@ -185,7 +185,7 @@ namespace VidPlace.Controllers
                 new Media(){ID=3,Name = "Oriental Express"},
             };
             return medias;
-        }
+        }*/
 
     }
 }

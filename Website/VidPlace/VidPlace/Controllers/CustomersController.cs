@@ -24,11 +24,50 @@ namespace VidPlace.Controllers
         }
 
         // GET: Customers/Index
-        public ActionResult Index()
+        public ActionResult Index(string SearchString, string sort)
         {
-            // return View(getCustomers());
-            return View(_context.Customers.Include(c => c.Membership).ToList());
+            //Check for user
+            string view ="ReadOnlyList";
+            if (User.IsInRole(RoleNames.CanManageMedia))
+            {
+                view = "List";
+            }
+            //var customers = GetCustomers();
+            //var emptyList = new List<Customer>();
+            var customers = _context.Customers.Include(c => c.Membership);
+
+            ViewBag.SortByName = string.IsNullOrEmpty(sort) ? "name_desc" : "";
+            ViewBag.SortbyMembership = sort == "membership" ? "membership_desc" : "membership";
+
+            if (!string.IsNullOrWhiteSpace(SearchString))
+            {
+                /* LINQ Code
+                customers = (from c in customers
+                             where c.Name.Contains(SearchString)
+                             select c);*/
+                customers = customers.Where(c => c.Name.Contains(SearchString));
+                ViewBag.search = SearchString;
+            }
+
+            switch (sort)
+            {
+                case "name_desc":
+                    customers = customers.OrderByDescending(c => c.Name);
+                    break;
+                case "membership":
+                    customers = customers.OrderBy(c => c.MembershipID);
+                    break;
+                case "membership_desc":
+                    customers = customers.OrderByDescending(c => c.MembershipID);
+                    break;
+                default:
+                    customers = customers.OrderBy(c => c.Name);
+                    break;
+            }
+
+            return View(view, customers.ToList());
         }
+
 
         // GET: Customers/Detail
         public ActionResult Details(int ID)
@@ -45,7 +84,7 @@ namespace VidPlace.Controllers
             }
         }
 
-
+        [Authorize(Roles = RoleNames.CanManageMedia)]
         public ActionResult New()
         {
             //var customer = new Customer();
@@ -93,11 +132,14 @@ namespace VidPlace.Controllers
                 customerInDB.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
                 customerInDB.MembershipID = customer.MembershipID;
                 customerInDB.BirthDate = customer.BirthDate;
-                
+
             }
             _context.SaveChanges();
             return RedirectToAction("Index", "Customers");
         }
+
+
+        [Authorize(Roles = RoleNames.CanManageMedia)]
         public ActionResult Edit(int ID)
         {
             var customerInDB = _context.Customers.SingleOrDefault(c => c.ID == ID);
@@ -112,16 +154,42 @@ namespace VidPlace.Controllers
             return View("CustomerForm", viewModel);
         }
 
-       /* private IEnumerable<Customer> getCustomers()
+
+        [Authorize(Roles = RoleNames.CanManageMedia)]
+        public ActionResult Delete(int? id)
         {
-            var customers = new List<Customer>
-            {
-                new Customer(){ID=1,Name = "Thomas Edison"},
-                new Customer(){ID=2,Name = "Mickey Mouse"},
-                new Customer(){ID=3,Name = "Jimmy Poo"},
-            };
-            return customers;
-        }*/
+            var customer = _context.Customers.Include(m => m.Membership).SingleOrDefault(m => m.ID == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            return View(customer);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var customerInDB = _context.Customers.Find(id);
+
+            _context.Customers.Remove(customerInDB);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
 
     }
 }
+
+
+
+/* private IEnumerable<Customer> getCustomers()
+ {
+     var customers = new List<Customer>
+     {
+         new Customer(){ID=1,Name = "Thomas Edison"},
+         new Customer(){ID=2,Name = "Mickey Mouse"},
+         new Customer(){ID=3,Name = "Jimmy Poo"},
+     };
+     return customers;
+ }*/
+
