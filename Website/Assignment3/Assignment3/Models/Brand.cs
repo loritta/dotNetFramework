@@ -10,9 +10,12 @@ namespace Assignment3.Models
     {
         public int ID { get; set; }
 
+        [Required]
+        [StringLength(200)]
         [Display(Name = "Brand Name")]
         public string BrandName { get; set; }
 
+        [Required]
         [Display(Name = "Country of Origin")]
         public string CountryOfOrigin { get; set; }
     }
@@ -20,4 +23,5 @@ namespace Assignment3.Models
 /*
 ID
 BrandName
-CountryOfOrigin*/
+CountryOfOrigin
+*/

@@ -123,3 +123,6 @@ B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\bin\Bootstra
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.InitialMigration.resources
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.csproj.GenerateResource.cache
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.ReferenceBrandAndType.resources
+B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.PopulatePhoneTypes.resources
+B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.AddRequired.resources
+B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.AddStringLength.resources

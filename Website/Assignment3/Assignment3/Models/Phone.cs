@@ -10,23 +10,27 @@ namespace Assignment3.Models
     {
         public int ID { get; set; }
 
+        [Required]
+        [StringLength(200)]
         [Display(Name = "Phone Name")]
         public string PhoneName { get; set; }
 
         public Brand Brand { get; set; }
 
+        [Required]
         [Display(Name = "Brand")]
         public int BrandID { get; set; }
 
         [Display(Name = "Date Released")]
         public DateTime DateReleased { get; set; }
 
-         [Display(Name = "Screen Size")]
+        [Required]
+        [Display(Name = "Screen Size")]
         public int ScreenSize { get; set; }
 
      
         public PhoneType PhoneType { get; set; }
-
+        [Required]
         [Display(Name = "Phone Type")]
         public int PhoneTypeID { get; set; }
     }
