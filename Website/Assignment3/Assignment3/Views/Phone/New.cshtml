@@ -1,0 +1,47 @@
+﻿@model Assignment3.ViewModels.PhoneFormViewModel
+@{
+	ViewBag.Title = "New";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Phone</h2>
+
+@using (Html.BeginForm("Save", "Phone"))
+{
+	@Html.ValidationSummary(true, "Please fix the following errors")
+<div class="form-group">
+	@Html.LabelFor(m => m.Phone.PhoneName, "Phone Name")
+	@Html.TextBoxFor(m => m.Phone.PhoneName, new { @class = "form-control" })
+	@Html.ValidationMessageFor(m => m.Phone.PhoneName)
+</div>
+<div class="form-group">
+	@Html.LabelFor(m => m.Phone.ScreenSize)
+	@Html.TextBoxFor(m => m.Phone.ScreenSize, new { @class = "form-control" })
+	@Html.ValidationMessageFor(m => m.Phone.ScreenSize)
+</div>
+	<div class="form-group">
+		@Html.LabelFor(m => m.Phone.DateReleased)
+		@Html.TextBoxFor(m => m.Phone.DateReleased, "{0:dd/MM/yyyy}", new { @class = "form-control" })
+		<!--"{ 0:d MMM yyyy}" --- not working-->
+	</div>
+	<div class="form-group">
+		@Html.LabelFor(m => m.Phone.BrandID)
+		@Html.DropDownListFor(m => m.Phone.BrandID, new SelectList(
+				   Model.Brands, "ID", "BrandName"), "Please select a brand", new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Phone.BrandID)
+	</div>
+	<div class="form-group">
+		@Html.LabelFor(m => m.Phone.PhoneTypeID)
+		@Html.DropDownListFor(m => m.Phone.PhoneTypeID, new SelectList(
+				   Model.PhoneTypes, "ID", "Type"), "Please select a type", new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Phone.PhoneTypeID)
+	</div>
+
+	@Html.HiddenFor(m => m.Phone.ID)
+	@Html.AntiForgeryToken()
+	<button type="submit" class="btn btn-primary">Save</button>
+}
+@section scripts
+    {
+	@Scripts.Render("~bundles/jqueryval")
+}

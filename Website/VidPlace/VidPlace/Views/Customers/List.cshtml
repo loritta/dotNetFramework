@@ -1,64 +1,64 @@
 ﻿@model IEnumerable<VidPlace.Models.Customer>
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Available customers</h2>
 @*
 
-    <ul>
-        @foreach (var customer in Model)
-        {
-            <li>@customer.Name</li>
+	<ul>
+		@foreach (var customer in Model)
+		{
+			<li>@customer.Name</li>
 
-        }
-    </ul>
+		}
+	</ul>
 *@
 <table class="table table-bordered table-hover">
-    <thead>
-        <tr>
-            <th>@Html.ActionLink("Customer's Name", "Index", "Customers", new { sort = "name", SearchString = ViewBag.search }, null)</th>
-            <th>@Html.ActionLink("Membership Type", "Index", "Customers", new { sort = "membership", SearchString = ViewBag.search }, null)</th>
-            <th>Functions</th>
-        </tr>
-    </thead>
-    @if (!Model.Any())
-    {
-        <tr>There are no customers available.</tr>
-    }
-    else
-    {
-        <p>
-            @Html.ActionLink("New Customer", "New", "Customers", null, new { @class="btn btn-primary"})
-            <input type="submit" value="Search" />
-        </p>
-        using (Html.BeginForm("Index", "Customers", FormMethod.Get))
-        {
-            <p>
-                Find Customer by name: @Html.TextBox("SearchString")
-                <input type="submit" value="Search" />
-            </p>
-        }
-        <tbody>
-            @foreach (var customer in Model)
-            {
-                <tr>
-                    <td>
-                        customer.Name
-                    </td>
-                    <td>
-                        @customer.Membership.Name
-                    </td>
-                    <td>
-                        @Html.ActionLink("Details", "Details", "Customers", new { id = customer.ID }, null) |
-                        @Html.ActionLink("Edit", "Edit", "Customers", new { id = customer.ID }, null) |
-                        @Html.ActionLink("Delete", "Delete", "Customers", new { id = customer.ID }, null)
-                    </td>
-                </tr>
+	<thead>
+		<tr>
+			<th>@Html.ActionLink("Customer's Name", "Index", "Customers", new { sort = "name", SearchString = ViewBag.search }, null)</th>
+			<th>@Html.ActionLink("Membership Type", "Index", "Customers", new { sort = "membership", SearchString = ViewBag.search }, null)</th>
+			<th>Functions</th>
+		</tr>
+	</thead>
+	@if (!Model.Any())
+	{
+		<tr>There are no customers available.</tr>
+	}
+	else
+	{
+		<p>
+			@Html.ActionLink("New Customer", "New", "Customers", null, new { @class = "btn btn-primary" })
+			<input type="submit" value="Search" />
+		</p>
+		using (Html.BeginForm("Index", "Customers", FormMethod.Get))
+		{
+			<p>
+				Find Customer by name: @Html.TextBox("SearchString")
+				<input type="submit" value="Search" />
+			</p>
+		}
+		<tbody>
+			@foreach (var customer in Model)
+			{
+				<tr>
+					<td>
+						customer.Name
+					</td>
+					<td>
+						@customer.Membership.Name
+					</td>
+					<td>
+						@Html.ActionLink("Details", "Details", "Customers", new { id = customer.ID }, null) |
+						@Html.ActionLink("Edit", "Edit", "Customers", new { id = customer.ID }, null) |
+						@Html.ActionLink("Delete", "Delete", "Customers", new { id = customer.ID }, null)
+					</td>
+				</tr>
 
-            }
-        </tbody>
-    }
+			}
+		</tbody>
+	}
 
 </table> 

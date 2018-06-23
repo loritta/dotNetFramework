@@ -126,3 +126,6 @@ B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\As
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.PopulatePhoneTypes.resources
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.AddRequired.resources
 B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.AddStringLength.resources
+B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.BrandsRename.resources
+B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.ValidationPhoneTypeBrand.resources
+B:\Larisa\ASPdotNET\dotNetFramework\Website\Assignment3\Assignment3\obj\Debug\Assignment3.Migrations.AddBrandTypesToDBSet.resources

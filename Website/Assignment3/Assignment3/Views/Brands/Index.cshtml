@@ -1,8 +1,43 @@
-﻿
+﻿@model IEnumerable<Assignment3.Models.Brand>
+
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
+<table class="table">
+	@if (!Model.Any())
+	{
+		<tr>There are no brands available.</tr>
+	}
+	else
+	{
+		@Html.ActionLink("New Mobile Brand", "New", "Brand", null, new { @class = "btn btn-primary" })
+		<tr>
+			<th>
+				Brand
+			</th>
+			<th>
+				Actions
+			</th>
 
+		</tr>
+
+		foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@item.BrandName
+				</td>
+				<td>
+					@Html.ActionLink("Details", "AvailablePhones", "Brands", new { id = item.ID }, null) |
+					@Html.ActionLink("Edit", "Edit", "Brands", new { id = item.ID }, null) |
+					@Html.ActionLink("Delete", "Delete", "Brands", new { id = item.ID }, null)
+				</td>
+
+			</tr>
+		}
+	}
+
+</table>

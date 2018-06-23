@@ -22,7 +22,8 @@ namespace Assignment3.Models
     {
         //DBSet properties
         public DbSet<Phone> Phones { get; set; }
-        public DbSet<Brand> Brand { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<PhoneType> PhoneTypes { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

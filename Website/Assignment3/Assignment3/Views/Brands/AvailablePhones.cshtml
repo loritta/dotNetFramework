@@ -1,8 +1,35 @@
 ﻿@model Assignment3.ViewModels.PhoneBrandViewModel
+
 @{
-    ViewBag.Title = "AvailablePhones";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "AvailablePhones";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@</h2>
+<h2>@Model.Brand.BrandName</h2>
 
+@if (Model.Phones.Equals(null))
+{
+	<tr>There are no phones available.</tr>
+}
+else
+{
+	<table class="table">
+		<tr>
+			<th>
+				Models
+			</th>
+		</tr>
+
+		@foreach (var item in Model.Phones)
+		{
+			<tr>
+				<td>
+					@item.PhoneName
+				</td>
+
+
+			</tr>
+		}
+
+	</table>
+}

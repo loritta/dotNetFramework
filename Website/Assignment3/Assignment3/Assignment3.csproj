@@ -223,6 +223,18 @@
     <Compile Include="Migrations\201806220257537_AddStringLength.Designer.cs">
       <DependentUpon>201806220257537_AddStringLength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806222039461_BrandsRename.cs" />
+    <Compile Include="Migrations\201806222039461_BrandsRename.Designer.cs">
+      <DependentUpon>201806222039461_BrandsRename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806230301320_ValidationPhoneTypeBrand.cs" />
+    <Compile Include="Migrations\201806230301320_ValidationPhoneTypeBrand.Designer.cs">
+      <DependentUpon>201806230301320_ValidationPhoneTypeBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806230425369_AddBrandTypesToDBSet.cs" />
+    <Compile Include="Migrations\201806230425369_AddBrandTypesToDBSet.Designer.cs">
+      <DependentUpon>201806230425369_AddBrandTypesToDBSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -233,15 +245,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\PhoneBrandViewModel.cs" />
+    <Compile Include="ViewModels\PhoneFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-darkly.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Smartphone.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Images\different.png" />
+    <Content Include="Content\Images\S6.png" />
+    <Content Include="Content\Images\X.png" />
+    <Content Include="Content\Images\S6.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -292,10 +310,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Brands\Index.cshtml" />
-    <Content Include="Views\Brands\AvailablePhones.cshtml" />
     <Content Include="Views\Phone\Index.cshtml" />
     <Content Include="Views\Phone\Details.cshtml" />
+    <Content Include="Views\Brands\Index.cshtml" />
+    <Content Include="Views\Brands\AvailablePhones.cshtml" />
+    <Content Include="Views\Phone\New.cshtml" />
+    <Content Include="Views\Phone\Delete.cshtml" />
+    <Content Include="Views\Brands\Edit.cshtml" />
+    <Content Include="Views\Brands\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -328,6 +350,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806220257537_AddStringLength.resx">
       <DependentUpon>201806220257537_AddStringLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806222039461_BrandsRename.resx">
+      <DependentUpon>201806222039461_BrandsRename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806230301320_ValidationPhoneTypeBrand.resx">
+      <DependentUpon>201806230301320_ValidationPhoneTypeBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806230425369_AddBrandTypesToDBSet.resx">
+      <DependentUpon>201806230425369_AddBrandTypesToDBSet.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

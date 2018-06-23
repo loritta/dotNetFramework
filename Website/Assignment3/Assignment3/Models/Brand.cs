@@ -10,12 +10,12 @@ namespace Assignment3.Models
     {
         public int ID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter the brand's name.")]
         [StringLength(200)]
         [Display(Name = "Brand Name")]
         public string BrandName { get; set; }
 
-        [Required]
+        
         [Display(Name = "Country of Origin")]
         public string CountryOfOrigin { get; set; }
     }

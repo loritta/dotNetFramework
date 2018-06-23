@@ -1,24 +1,79 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space: normal;
+	white-space: normal;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
+	max-width: 280px;
 }
+
+section {
+	color: #00bc8c;
+	height: 100vh;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	background-size: unset;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+	section h1 {
+		font-size: 3vw;
+		padding: 2vw;
+	}
+
+.intro {
+	padding: 2vw;
+	background-color: RGBA(84,84,84,0.7);
+	border-radius: 15%;
+}
+
+
+.imagePhone {
+	width: auto;
+	height: auto;
+	max-height: 30vh;
+	padding-left: 20px;
+}
+
+section:first-of-type {
+	margin-top: -10vh;
+	width: 100vh;
+}
+.imgIntro {
+	width: auto
+}
+.field-validation-error, .validation-summary-errors, .warning {
+	color: red;
+}
+

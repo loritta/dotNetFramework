@@ -10,27 +10,28 @@ namespace Assignment3.Models
     {
         public int ID { get; set; }
 
-        [Required]
-        [StringLength(200)]
+        
+        [StringLength(255)]
+        [Required(ErrorMessage = "Please enter the phone's name.")]
         [Display(Name = "Phone Name")]
         public string PhoneName { get; set; }
 
         public Brand Brand { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter the phone's brand.")]
         [Display(Name = "Brand")]
         public int BrandID { get; set; }
 
         [Display(Name = "Date Released")]
         public DateTime DateReleased { get; set; }
-
-        [Required]
+        
         [Display(Name = "Screen Size")]
+        [Range(2,7,ErrorMessage ="Screen size should be between 2 and 7.")]
         public int ScreenSize { get; set; }
 
      
         public PhoneType PhoneType { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please enter the phone's type.")]
         [Display(Name = "Phone Type")]
         public int PhoneTypeID { get; set; }
     }

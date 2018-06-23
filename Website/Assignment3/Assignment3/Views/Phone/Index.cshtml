@@ -1,8 +1,59 @@
-﻿
+﻿@model IEnumerable<Assignment3.Models.Phone>
 @{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Available phones</h2>
 
+<table class="table table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Phone Name</th>
+			<th>Phone Brand</th>
+			<th>Phone Photo</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	@if (!Model.Any())
+	{
+		<tr>There are no phones available.</tr>
+	}
+	else
+	{
+		<p>
+			@Html.ActionLink("New Mobile Device", "New", "Phone", null, new { @class = "btn btn-primary" })
+
+		</p>
+
+		<tbody>
+			@foreach (var phone in Model)
+			{
+				<tr>
+					<td>
+						@phone.PhoneName
+					</td>
+					<td>
+						@phone.Brand.BrandName
+					</td>
+					<td>
+						@{
+							string img = "~/Content/Images/" + @phone.PhoneName + ".png";
+
+							string alt = @phone.PhoneName + "," + phone.Brand.BrandName + "image";
+						}
+						<img src="@Url.Content(img)" alt="@alt" class="imagePhone" />
+
+					</td>
+					<td>
+						@Html.ActionLink("Details", "Details", "Phone", new { id = phone.ID }, null) |
+						@Html.ActionLink("Edit", "Edit", "Phone", new { id = phone.ID }, null) |
+						@Html.ActionLink("Delete", "Delete", "Phone", new { id = phone.ID }, null)
+					</td>
+
+				</tr>
+			}
+		</tbody>
+	}
+
+</table> 

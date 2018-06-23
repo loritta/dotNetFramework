@@ -1,8 +1,25 @@
-﻿
+﻿@model Assignment3.Models.Phone
 @{
-    ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Phone Details</h2>
+<ul>
 
+	<li>
+		Phone Name: @Model.PhoneName
+	</li>
+	<li>
+		Brand Type: @Model.Brand.BrandName
+	</li>
+	<li>
+		Release Date: @Model.DateReleased.ToShortDateString()
+	</li>
+	<li>
+		Screen Size: @Model.ScreenSize
+	</li>
+	<li>
+		Phone type: @Model.PhoneType.Type
+
+</ul>

@@ -10,12 +10,12 @@ namespace Assignment3.Models
     {
         public int ID { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        [Required(ErrorMessage = "Please enter the phone's type.")]
+        [StringLength(10)]
         public string Type { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        [Required(ErrorMessage = "Please enter the phone's OS type.")]
+        [StringLength(10)]
         public string OS { get; set; }
     }
 }
