@@ -45,9 +45,9 @@ namespace Assignment3.Controllers
         }
         public ActionResult New()
         {
-            var model = _context.Brands.SingleOrDefault(); 
+            var model =new Brand(); 
 
-            return View("New", model);
+            return View("Edit", model);
         }
 
         //Saving action into DB
@@ -61,7 +61,7 @@ namespace Assignment3.Controllers
             {
                 //The form is not valid => return same form to the user
                 var model = _context.Brands.SingleOrDefault();
-                return View("New", model);
+                return View("Edit", model);
             }
 
             if (brand.ID == 0)
@@ -73,10 +73,9 @@ namespace Assignment3.Controllers
                 var brandInDB = _context.Brands.Single(c => c.ID == brand.ID);
                 TryUpdateModel(brandInDB);
 
-
             }
             _context.SaveChanges();
-            return RedirectToAction("Index", "Brand");
+            return RedirectToAction("Index", "Brands");
         }
         [Authorize]
         public ActionResult Edit(int ID)
@@ -84,7 +83,7 @@ namespace Assignment3.Controllers
             var brandInDB = _context.Brands.SingleOrDefault(c => c.ID == ID);
             if (brandInDB == null)
                 return HttpNotFound();
-            return View("New", brandInDB);
+            return View("Edit", brandInDB);
         }
 
         [Authorize]
